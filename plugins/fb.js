@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 
 let handler = async (m, { conn, args }) => {
 	m.reply('Proses')
-	let res = await fetch(global.API('xteam', '/dl/fbv2', { url: args[0] }, 'APIKEY'))
+	let res = await fetch(`https://api.lolhuman.xyz/api/facebook?apikey=c6670fc7e461b7623a8fdf9f&url=` + args[0])
 	if (res.status !== 200) throw `Coba Lagi`
 	let json = await res.json()
 	if (!json.result) throw `Media tidak ditemukan atau postingan mungkin diprivate`
