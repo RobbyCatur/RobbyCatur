@@ -1,21 +1,24 @@
 let handler = async (m, { conn }) => {
   conn.sendButton(m.chat, `
 *_PAYMENT/PEMBAYARAN_*
- *FrihetStore* 
+🔰 *FrihetStore* 🔰
 
-/Shopee/Gopay/Ovo/Neo+                                 
-Nomor : 082288316705 (Muhammad Zulfadli)
+💳 SHOPE : 082288316705 
+ 
+💳 OVO : 082288316705
 
-DANA : 081372434381 (MAR***)
+💳 NEO BANK : 082288316705
 
+💳 BCA VIRTUAL ACCOUNT : 1375300000623051
 
-
-BCA
-NOMOR : 8550473446 (Muhammad Zulfadli)
-
- Qris/Alfamart/Indomaret
+💳DANA/GOPAY : MINTA KE ADMIN BERUPA QRIS ATAU BUKU WARUNG
+ 
+💳 Qris/Alfamart/Indomaret
 Pm Langsung Ke admin
-`.trim(), '� Robby Catur', 'MENU', '.frihetstore', m)
+
+*NOTE :*
+SEMUA PEMBAYARAN ATAS NAMA *MUHAMMAD ZULFADLI*
+`.trim(), '© Robby Catur', 'MENU', '.frihetstore', m)
   }
 handler.command = /^payment$/i
 module.exports = handler
