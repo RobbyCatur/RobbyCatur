@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+let fetch = require('node-fetch')
 
 let handler = async (m, { conn, args }) => {
   let res = await fetch(`https://hardianto.xyz/api/instagram?url=` + args[0])
