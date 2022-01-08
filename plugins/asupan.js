@@ -1,6 +1,7 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn }) => {
+  m.reply('Proses')
   let me = conn.user.name
   let res = await fetch(`https://api.lolhuman.xyz/api/asupan?apikey=c6670fc7e461b7623a8fdf9f`)
   let json = await res.json()
