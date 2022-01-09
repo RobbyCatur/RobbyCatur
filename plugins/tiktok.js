@@ -7,7 +7,7 @@ let handler = async (m, { conn, args }) => {
   if (res.status !== 200) throw `Server error!`
   let json = await res.json()
 //  if (!json.status) throw json
-  let url = json.result.link
+  let url = json.result
   let txt = `
 ${me} Tiktok Downloader
     `
