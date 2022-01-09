@@ -16,6 +16,6 @@ ${me} Tiktok Downloader
 handler.help = ['tiktok', 'tt', 'tik'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 
-handler.command = /^t(ik)?t(ok)?(dl)?$/i
+handler.command = /^t(ik)?t(ok)?$/i
 handler.limit = true
 module.exports = handler
