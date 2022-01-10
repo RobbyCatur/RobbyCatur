@@ -1,4 +1,4 @@
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, _p }) => {
   const chats = conn.chats.all()
   const groups = chats.filter(v => v.jid.endsWith('g.us'))
   const groupsIn = groups.filter(v => !v.read_only)
