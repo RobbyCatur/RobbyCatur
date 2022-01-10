@@ -27,7 +27,7 @@ User Terdaftar : ${rtotalreg}
 
 Bot telah berjalan selama ${uptime}
 Bot telah berjalan pada ${noww}
-`trim(), m)
+`.trim(), m)
 }
 handler.command ,= /^infobot$/i
 module.exports = handler
