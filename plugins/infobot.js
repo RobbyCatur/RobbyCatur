@@ -11,6 +11,11 @@ let handler = async (m, { conn }) => {
       minute: 'numeric',
       second: 'numeric'
     })
+  let locale = 'id'
+    // d.getTimeZoneOffset()
+    // Offset -420 is 18.00
+    // Offset    0 is  0.00
+    // Offset  420 is  7.00
   let _uptime = process.uptime() * 1000
   let uptime = clockString(_uptime)
   let noww = time - uptime
