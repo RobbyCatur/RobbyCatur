@@ -6,16 +6,16 @@ let handler = async (m, { conn, _p }) => {
   let totalreg = Object.keys(global.db.data.users).length
   let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
   let d = new Date(new Date + 3600000)
-  let time = d.toLocaleTimeString(locale, {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric'
-    })
   let locale = 'id'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
     // Offset    0 is  0.00
     // Offset  420 is  7.00
+  let time = d.toLocaleTimeString(locale, {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    })
   let _uptime = process.uptime() * 1000
   let uptime = clockString(_uptime)
   let noww = time - uptime
