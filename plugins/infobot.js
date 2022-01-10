@@ -29,7 +29,7 @@ Bot telah berjalan selama ${uptime}
 Bot telah berjalan pada ${noww}
 `.trim(), m)
 }
-handler.command ,= /^infobot$/i
+handler.command = /^infobot$/i
 module.exports = handler
 
 function clockString(ms) {
