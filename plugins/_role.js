@@ -2,15 +2,16 @@ const roles = {
   /*
   'Role Name': <Minimal Level To Obtain this Role>
   */
-  'Beginner': 0,
-  'Kitten Town': 10,
-  'Black Woods': 20,
-  'Farmount': 30,
-  'Rosenvale': 40,
-  'Amberhill': 50,
-  'Master Fap': 60,
-  'Master Woods': 80,
-  'Legend': 90
+  'Tidak Ada Role': 0,
+  'Pemula': 10,
+  'Junior': 20,
+  'Senior': 30,
+  'Pengguna Sejati': 40,
+  'Master': 50,
+  'Grand Master': 60,
+  'Sepuh': 70
+  'Tetua': 80,
+  'Sang Legendaris': 90
 }
 
 module.exports = {
