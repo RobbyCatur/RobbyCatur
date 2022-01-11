@@ -9,6 +9,7 @@ let tags = {
   'sticker': 'Sticker & Converter',
   'game': 'Permainan',
   'random': 'Random',
+  'tools': 'Alat',
   'downloader': 'Downloader',
   'owner': 'Khusus Owner',
   'info': 'Info Bot',
