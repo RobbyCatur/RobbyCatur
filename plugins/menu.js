@@ -122,7 +122,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     conn.sendButton(m.chat, `
-Mohon dibaca terlebih dahulu rules yang telah disiapkan. Jika melanggar, maka akan dikenakan sanksi
+Silahkan isi link berikut berdasarkan pengalaman Anda. https://forms.gle/14SNevX1tCUE2y8Z7
+Terimakasih telah mengisi. Suara Anda adalah pertimbangan saya untuk membuat Anda puas 
 `.trim(), '© Robby Catur', 'RULES', '.rules', m)
     conn.sendButton(m.chat, text.trim(), '© Robby Catur', 'OWNER', '.owner', m)
   } catch (e) {
