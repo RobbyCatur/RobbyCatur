@@ -7,7 +7,6 @@ let handler = async (m, { conn, _p }) => {
   let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
   let _uptime = process.uptime() * 1000
   let uptime = clockString(_uptime)
-  let noww = time - uptime
   conn.reply(m.chat, `
 *Info Bot:*
 Total Chat : ${chats.length}
@@ -20,7 +19,6 @@ User Bot : ${totalreg}
 User Terdaftar : ${rtotalreg}
 
 Bot telah berjalan selama ${uptime}
-Bot telah berjalan pada ${noww}
 `.trim(), m)
 }
 handler.help = ['infobot']
