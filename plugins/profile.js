@@ -16,8 +16,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let prem = global.prems.includes(who.split`@`[0])
     let str = `
 *Info User*:
-Nama : ${username} ${registered ? '(' + name + ')' : ''}
-${registered ? '\Umur: ' + age : ''}
+Nama : ${username} ${registered ? '(' + name + ')' : ''}${registered ? '\Umur: ' + age : ''}
 Bio : ${about ? about : '-'}
 Nomor : ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 Link: https://wa.me/${who.split`@`[0]}
