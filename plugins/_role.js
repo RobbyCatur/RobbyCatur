@@ -9,7 +9,7 @@ const roles = {
   'Pengguna Sejati': 40,
   'Master': 50,
   'Grand Master': 60,
-  'Sepuh': 70
+  'Sepuh': 70,
   'Tetua': 80,
   'Sang Legendaris': 90
 }
