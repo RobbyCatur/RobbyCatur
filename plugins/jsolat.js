@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-let handler = async (m, { conn, text } => {
+let handler = async (m, { conn, text }) => {
 	m.reply('Proses')
   let res = await fetch(`https://docs-jojo.herokuapp.com/api/jadwalshalat?daerah=` + text )
   let json = await res.json()
