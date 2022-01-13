@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
   let json = await res.json()
   let quotes = json.quotes
   let author = json.author
-  if (json.quotes) conn.reply(m.chat, `Random quotes\n\"${quotes}\" by ${author}, m)
+  if (json.quotes) conn.reply(m.chat, `Random quotes\n\"${quotes}\" by ${author}`, m)
   else throw `Not Found`
   }
   handler.command = /^quotes$/i
