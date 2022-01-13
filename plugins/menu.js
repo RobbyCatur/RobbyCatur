@@ -6,6 +6,7 @@ let tags = {
   'admin': 'Khusus Admin',
   'group': 'Khusus Didalam Grup',
   'internet': 'Pencarian',
+  'wibu': 'Wibu',
   'sticker': 'Sticker & Converter',
   'game': 'Permainan',
   'random': 'Random',
