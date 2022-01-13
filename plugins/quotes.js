@@ -7,5 +7,7 @@ let handler = async (m, { conn }) => {
   if (json.quotes) conn.reply(m.chat, `Random quotes\n\"${quotes}\" by ${author}`, m)
   else throw `Not Found`
   }
+  handler.help = ['quotes']
+  handler.help = ['random']
   handler.command = /^quotes$/i
-module.exports = handler
+  module.exports = handler
