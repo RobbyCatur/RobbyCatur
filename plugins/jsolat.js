@@ -17,5 +17,5 @@ Isya : ${json.Isya}
 `.trim()
   conn.reply(m.chat, result, m)
   }
-  handler.conmand = /^j(adwal)?(sholat|salat|solat|shalat)$/i
+  handler.conmand = /^jsolat$/i
   module.exports = handler
