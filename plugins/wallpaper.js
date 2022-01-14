@@ -1,7 +1,8 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn, text }) => {
-  m.reply('Proses')
+  if (text) m.reply('Proses')
+  else m.reply('Masukkan query!')
   let res = await fetch('https://api.lolhuman.xyz/api/wallpaper?apikey=c6670fc7e461b7623a8fdf9f&query=' + text )
   let json = await res.json()
   let result = json.result
