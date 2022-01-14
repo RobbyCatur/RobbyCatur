@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+let fetch = require('node-fetch')
 
 let handler = async (m, { conn, text }) => {
 	m.reply('Proses')
