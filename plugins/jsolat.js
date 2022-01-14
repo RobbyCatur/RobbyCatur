@@ -15,8 +15,7 @@ Ashar : ${json.Ashar}
 Maghrib : ${json.Maghrib}
 Isya : ${json.Isya}
 `.trim()
-  if (result) await m.reply(result)
-  else throw `Kota tidak ditemukan`
+  conn.reply(m.chat, result, m)
   }
   handler.conmand = /^j(adwal)?(sholat|salat|solat|shalat)$/i
   module.exports = handler
