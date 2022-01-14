@@ -4,7 +4,7 @@ let handler = async (m, { conn, text }) => {
 let res = await fetch(`https://docs-jojo.herokuapp.com/api/jadwalshalat?daerah=` + text )
 let json = await res.json()
 let result = `
-Jadwal sholat untuk Probolinggo
+Jadwal sholat untuk ${text}
 
 Imsyak : ${json.Imsyak}
 Subuh : ${json.Subuh}
