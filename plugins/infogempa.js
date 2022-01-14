@@ -15,7 +15,7 @@ koordinat : ${json.koordinat}
 Lokasi : ${json.lokasi}
 Potensi : ${json.potensi}
 `.trim()
-  if (json.status == 200) await conn.sendFile(m.char, img, 'img.jpg', result, m)
+  if (json.status == 200) await conn.sendFile(m.chat, img, 'img.jpg', result, m)
   else throw `Error Not Found`
   }
   handler.command = /^infogempa$/i
