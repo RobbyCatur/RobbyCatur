@@ -1,11 +1,10 @@
 let fetch = require('node-fetch')
 
 let handler = async (m, { conn, text }) => {
-	m.reply('Proses')
-  let res = await fetch(`https://docs-jojo.herokuapp.com/api/jadwalshalat?daerah=` + text )
-  let json = await res.json()
-  let result = `
-  Jadwal sholat untuk ${text}
+let res = await fetch(`https://docs-jojo.herokuapp.com/api/jadwalshalat?daerah=` + text )
+let json = await res.json()
+let result = `
+Jadwal sholat untuk Probolinggo
 
 Imsyak : ${json.Imsyak}
 Subuh : ${json.Subuh}
@@ -15,7 +14,7 @@ Ashar : ${json.Ashar}
 Maghrib : ${json.Maghrib}
 Isya : ${json.Isya}
 `.trim()
-  conn.reply(m.chat, result, m)
+m.reply(result)
   }
-  handler.conmand = /^jsolat$/i
+  handler.command = /^jsolat$/i
   module.exports = handler
