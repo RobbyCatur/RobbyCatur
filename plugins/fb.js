@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 
 let handler = async (m, { conn, args }) => {
 	m.reply('Proses')
-	let res = await fetch(`https://masgimenz.my.id/facebook/?url=https://www.facebook.com/groups/435836803952410/permalink/1019003362302415/?app=fbl` + args[0])
+	let res = await fetch(`https://masgimenz.my.id/facebook/?url=` + args[0])
 	//if (res.status !== 200) throw `Coba Lagi`
 	let json = await res.json()
 	//if (!json.result) throw `Media tidak ditemukan atau postingan mungkin diprivate`
