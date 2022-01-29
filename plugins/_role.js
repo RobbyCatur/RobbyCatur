@@ -11,7 +11,8 @@ const roles = {
   'Grand Master': 60,
   'Sepuh': 70,
   'Tetua': 80,
-  'Sang Legendaris': 90
+  'Sang Legendaris': 90,
+  'Penguasa': 1000
 }
 
 module.exports = {
