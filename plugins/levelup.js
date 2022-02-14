@@ -6,6 +6,7 @@ let handler = m => {
     let { min, xp, max } = levelling.xpRange(user.level, global.multiplier)
     throw `
 Level *${user.level} (${user.exp - min}/${xp})*
+Role *${user.role}
 Kurang *${max - user.exp}* lagi!
 `.trim()
   }
@@ -15,6 +16,7 @@ Kurang *${max - user.exp}* lagi!
             m.reply(`
 Selamat, anda telah naik level!
 *${before}* -> *${user.level}*
+Role *${user.role}
 gunakan *.profile* untuk mengecek
 	`.trim())
         }
