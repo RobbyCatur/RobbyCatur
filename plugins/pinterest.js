@@ -11,8 +11,7 @@ let handler = async (m, { conn, args }) => {
 ${me} Pinterest Downloader
 Media Type: ${type}
 `.trim()
-  if (json.result) await conn.sendFile(m.chat, result, 'pinterest.jpg', teks, m)
-    else throw `Cannot find media`
+  conn.sendFile(m.chat, result, 'pinterest.jpg', teks, m)
 }
 
 handler.help = ['pinterest']
