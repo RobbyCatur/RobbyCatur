@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 let handler = async (m, { conn, args }) => {
   m.reply('Proses')
-  let res = await fetch('https://docs-jojo.herokuapp.com/api/pinterest?url=' + args[0]}
+  let res = await fetch('https://docs-jojo.herokuapp.com/api/pinterest?url=' + args[0])
   let json = await res.json
   let type = json.type
   let result = json.result
