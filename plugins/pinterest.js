@@ -1,21 +1,11 @@
-const fetch = require('node-fetch')
+let fetch = require('node-fetch')
 
-let handler = async (m, { conn, args }) => {
-  m.reply('Proses')
-  let me = conn.user.name
-  let res = await fetch('https://docs-jojo.herokuapp.com/api/pinterest?url=' + args[0])
-  let json = await res.json
-  let type = json.type
+let handler = async (m, { conn. args }) => {
+  let res = await fetch(`https://docs-jojo.herokuapp.com/api/pinterest?url=` + args[0])
+  let json = await res.json()
   let result = json.result
-  let teks = `
-${me} Pinterest Downloader
-Media Type: ${type}
-`.trim()
-  conn.sendFile(m.chat, result, 'pinterest.jpg', teks, m)
-}
-
-handler.help = ['pinterest']
-handler.tags = ['downloader']
-handler.command = /^pin(terest)?$/i
+  conn.sendFile(m.chat, result, 'pinterest' + ${json.type == 'image' ? '.jpg' : '.mp4', `tes`, m)
+  }
+  handler.command = /^pin$/i
 
 module.exports = handler
