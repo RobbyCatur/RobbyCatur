@@ -7,7 +7,7 @@ let handler = async (m, { conn, arg }) => {
 	let json = await res.json()
 	let url = json.result
 	let type = json.type
-	conn.sendFile(m.chat, url, 'pin' + ${type == 'video' ? '.mp4' : '.jpg'}, `${me} pinterest downloader`, m)
+	conn.sendFile(m.chat, url, ${type == 'video' ? 'pin.mp4' : 'pin.jpg'}, `${me} pinterest downloader`, m)
 	}
 	handler.command = /^pin$/i
 
