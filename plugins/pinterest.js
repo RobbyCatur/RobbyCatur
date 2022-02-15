@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 
-let handler = async (m, { conn, arg }) => {
+let handler = async (m, { conn, args }) => {
 	m.reply('Proses')
 	let me = conn.user.name
 	let res = await fetch(`https://docs-jojo.herokuapp.com/api/pinterest?url=` + args[0])
