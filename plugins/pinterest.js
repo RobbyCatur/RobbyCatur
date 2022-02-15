@@ -6,8 +6,7 @@ let handler = async (m, { conn, arg }) => {
 	let res = await fetch(`https://docs-jojo.herokuapp.com/api/pinterest?url=` + args[0])
 	let json = await res.json()
 	let url = json.result
-	let type = json.type
-	conn.sendFile(m.chat, url, ${type == 'video' ? 'pin.mp4' : 'pin.jpg'}, `${me} pinterest downloader`, m)
+	conn.sendFile(m.chat, url, 'pin.jpg', `${me} pinterest downloader`, m)
 	}
 	handler.command = /^pin$/i
 
