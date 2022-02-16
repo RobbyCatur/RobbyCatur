@@ -405,26 +405,18 @@ Sedang mengirim ulang pesan
     this.copyNForward(m.key.remoteJid, m.message).catch(e => console.log(e, m))
   },
   async onCall(json) {
-    if (!setting.anticall) return
-    let jid = json[2][0][1]['from']
-    let isOffer = json[2][0][2][0][0] == 'offer'
-    let users = global.db.data.users
-    let user = users[jid] || {}
+    let { from } = json[2][0][1]
+    let users = global.DATABASE.data.users
+    let user = users[from] || {}
     if (user.whitelist) return
-    if (jid && isOffer) {
-      const tag = this.generateMessageTag()
-      const nodePayload = ['action', 'call', ['call', {
-        'from': this.user.jid,
-        'to': `${jid.split`@`[0]}@s.whatsapp.net`,
-        'id': tag
-      }, [['reject', {
-        'call-id': json[2][0][2][0][1]['call-id'],
-        'call-creator': `${jid.split`@`[0]}@s.whatsapp.net`,
-        'count': '0'
-      }, null]]]]
-      this.sendJSON(nodePayload, tag)
-      m.reply('Dimohon untuk tidak menelpon bot!')
+    switch (this.callWhitelistMode) {
+      case 'mycontact':
+        if (from in this.contacts && 'short' in this.contacts[from])
+          return
+        break
     }
+    await this.sendMessage(from, 'Maaf, karena anda menelfon bot. anda diblokir otomatis', MessageType.extendedText)
+    await this.blockUser(from, 'add')
   }
 }
 
