@@ -1,8 +1,8 @@
 let fetch = require('node-fetch')
 
-let handler = async (m, { conn, args }) => {
+let handler = async (m, { conn, text }) => {
   m.reply('Proses')
-  let res = await fetch(`https://api-xcoders.xyz/api/stalk/ig?username=` + args[0] `&apikey=DPZDDDpHHM`)
+  let res = await fetch(`https://api-xcoders.xyz/api/stalk/ig?username=` + text `&apikey=DPZDDDpHHM`)
   let json = await res.json()
   let result = json.result
   let pp = result.profile_url
