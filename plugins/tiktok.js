@@ -1,7 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args, isOwner }) => {
-	if (args[0] m.reply('Proses')
-  else m.reply('Link tiktoknya mana')
+	if (!args[0]) await m.reply('Link tiktoknya mana')
  // if (!isOwner) throw `Maaf, sementara fitur ini dinonaktifkan dulu karena terdapat bug`
   let me = conn.user.name
   let res = await fetch(`https://erdwpe-api.herokuapp.com/downloader/tiktok?url=` + args[0])
