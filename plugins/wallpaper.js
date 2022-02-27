@@ -10,5 +10,5 @@ let handler = async (m, { conn, text }) => {
   }
   handler.help = ['wp', 'wallpaper'].map(v => v + '<teks>')
   handler.tags = ['internet']
-  handler.command = /^wp|wallpaper$/i
+  handler.command = /^(wp|wallpaper)$/i
   module.exports = handler
