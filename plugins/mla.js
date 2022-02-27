@@ -1,35 +1,26 @@
 let handler = async (m, { conn }) => {
   conn.sendButton(m.chat, `
-*_PriceList Diamond ML A_*
+*_PriceList Diamond ML B_*
 *_Via ID - Legal 100%_*
-🔰 *FrihetStore* 🔰
+🔰 *_FrihetStore_* 🔰
 
-86 💎 = Rp18.550
-172 💎 =Rp37.100 
-257 💎 = Rp55.650 
-344 💎 = Rp74.200
-429 💎 = Rp92.750
-514 💎 = Rp111.300
-600 💎 = Rp130.000
-706 💎 = Rp148.500 
-878 💎 = Rp185.500 
-963 💎 = Rp204.100 
-1050 💎 = Rp222.600 
-1220 💎 = Rp259.700 
-1412 💎 = Rp296.800 
-2195 💎 =Rp450.000
-3073 💎 = Rp630.000
-3688 💎 = Rp740.000
-4032 💎 = Rp815.000 
-5532 💎 = Rp1.150.000 
-6238 💎 = Rp1.300.000 
-9288 💎 = Rp1.900.000 
-⭐SL/TW	 Rp125.000
-🌟SL PLUS	 Rp285.000
+34+5 = 39💎 Rp 9.222
+58+7 = 65💎 Rp 15.111
+83+9 = 92💎 Rp 20.944
+120+13 = 133💎 Rp 29.920
+240+26 = 266💎 Rp 59.874
+360+40 = 400💎 Rp 89.726
+480+54 = 534💎 Rp 119.680
+600+70 = 670💎 Rp 149.600
+1200+142 = 1342💎 Rp 299.200
+2400+300 = 2700💎 Rp 598.500
+3600+550 = 4150💎 Rp 898.000
+6000+1050 = 7050💎 Rp 1.500.000
 
-
-⏳ *_PROSES 1-10 MENIT_*
+⏳ *PROSES 3-60 MENIT MAX* 
+*24 JAM*
 ⚠️ *NOTE : TANYAKAN STOK SEBELUM MELAKUKAN TRANSFER*
+⚠️ *NOTE : TANDA (+) ATAU BONUS TIDAK TERHITUNG PADA EVENT TOPUP*
 `.trim(), '© Robby Catur', 'BAYAR', '.payment', m)
 }
 
