@@ -3,9 +3,9 @@ let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
   m.reply('Proses')
   let me = conn.user.name
-  let res = await fetch('https://api-xcoders.xyz/api/download/ig?url=' + args[0] + '&apikey=DPZDDDpHHM')
+  let res = await fetch('https://api.lolhuman.xyz/api/instagram?apikey=c6670fc7e461b7623a8fdf9f&url=' + args[0])
   let json = await res.json()
-  let result = json.result.url
+  let result = json.result[0]
   let txt = `
 ${me} Instagram downloader
 `.trim()
