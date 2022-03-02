@@ -10,6 +10,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 
 ${json.result}
 `.trim()
+  if (!json.result) throw `Lirik lagu ${text} tidak ditemukan!`
   conn.reply(m.chat, txt, m)
 }
 handler.command = /^(lirik)$/i
