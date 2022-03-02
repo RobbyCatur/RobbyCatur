@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
 }, 'APIKEY'))
   let json = await res.json()
   let result = json.result
-  conn.reply(m.chat, result, m)
+  m.reply(result)
   }
 handler.command = /^(lirik)$/i
 module.exports = handler
