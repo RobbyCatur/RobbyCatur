@@ -13,5 +13,7 @@ ${json.result}
   if (!json.result) throw `Lirik lagu ${text} tidak ditemukan!`
   conn.reply(m.chat, txt, m)
 }
+handler.help = ['lirik']
+handler.tags = ['internet']
 handler.command = /^(lirik)$/i
 module.exports = handler
