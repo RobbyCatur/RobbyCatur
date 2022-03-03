@@ -1,5 +1,5 @@
 let handler = async (m, { conn, args }) => {
-  let who = m.mentionedJid ? m.mentionedJid : m.qouted ? m.quoted.sender : ''
+  let who = m.mentionedJid[0] ? m.mentionedJid[0] : m.qouted ? m.quoted.sender : ''
   await conn.groupRemove(m.chat, [who])
 }
 handler.help = ['kick', '-'].map(v => v + ' @user')
