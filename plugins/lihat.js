@@ -4,5 +4,5 @@ let handler = async (m, { conn }) => {
             await conn.copyNForward(m.chat, await this.loadMessage(m.chat, q.id), false, { readViewOnce: true })
         }
     }
-  handler.comnand = /^(lihat)$/i
+  handler.command = /^(lihat)$/i
   module.exports = handler
