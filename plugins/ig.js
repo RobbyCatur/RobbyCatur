@@ -9,7 +9,7 @@ let handler = async (m, { conn, args }) => {
   let txt = `
 ${me} Instagram downloader
 `.trim()
-  conn.sendFile(m.chat, result, 'ig.jpg', txt, m)
+  conn.sendFile(m.chat, json.result, 'ig.mp4', txt, m)
 }
 handler.help = ['ig']
 handler.tags = ['downloader']
