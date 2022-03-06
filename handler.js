@@ -83,7 +83,7 @@ module.exports = {
           sBye: '',
           sPromote: '',
           sDemote: '',
-          delete: false,
+          delete: true,
           antiLink: false,
           antiSticker: false,
           getmsg: false,
