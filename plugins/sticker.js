@@ -8,7 +8,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (/image/.test(mime)) {
       let img = await q.download()
       if (!img) throw `balas gambar dengan caption *${usedPrefix + command}*`
-      stiker = await sticker(img, false, global.packname, global.author)
+      stiker = await sticker(img, false, 'Pudge-invoker', 'Robby Catur')
     } else if (/video/.test(mime)) {
       if ((q.msg || q).seconds > 11) return m.reply('Maksimal 10 detik!')
       let img = await q.download()
