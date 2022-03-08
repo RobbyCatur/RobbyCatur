@@ -25,8 +25,8 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = sticker_name
-global.author = sticker_author
+global.packname = 'Pudge Invoker'
+global.author = 'Robby Catur'
 
 
 global.multiplier = 69 // The higher, The harder levelup
