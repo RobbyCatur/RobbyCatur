@@ -5,7 +5,6 @@ let handler = async (m, { conn, args }) => {
      else m.reply('Proses')
   hx.igdl(args[0]).then(r => {
   let me = conn.user.name
-  let json = await res.json()
   let txt = `
 ${me} Instagram downloader
 `.trim()
