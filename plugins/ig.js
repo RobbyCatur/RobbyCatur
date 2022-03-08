@@ -11,6 +11,8 @@ ${me} Instagram downloader
 `.trim()
   for (let i = 0; i < r.medias.length; i++) {
   conn.sendFile(m.chat, r.medias[i].url, '', txt, m)
+    }
+  })
 }
 handler.help = ['ig']
 handler.tags = ['downloader']
