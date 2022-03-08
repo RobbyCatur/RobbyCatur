@@ -1,15 +1,16 @@
-let fetch = require('node-fetch')
+const hx = require('hxz-api')
 
 let handler = async (m, { conn, args }) => {
   if (!(args[0])) throw `Masukkan link Instagram yang ingin didownload!`
      else m.reply('Proses')
+  hx.igdl(args[0]).then(r => {
   let me = conn.user.name
-  let res = await fetch('https://hadi-api.herokuapp.com/api/instagram?url=' + args[0])
   let json = await res.json()
   let txt = `
 ${me} Instagram downloader
 `.trim()
-  conn.sendFile(m.chat, json.result, 'ig.mp4', txt, m)
+  for (let i = 0; i < r.medias.length; i++) {
+  conn.sendFile(m.chat, r.medias[i].url, '', txt, m)
 }
 handler.help = ['ig']
 handler.tags = ['downloader']
