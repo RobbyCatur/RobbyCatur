@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
     let id = global.conns.length
     let conn = new global.conn.constructor()
     conn.version = global.conn.version
-    conn.browserDescription = ['robbycatur', '', '5.0']
+    conn.browserDescription = ['wabot-aq', '', '5.0']
     if (args[0] && args[0].length > 200) {
       let json = Buffer.from(args[0], 'base64').toString('utf-8')
       // global.conn.reply(m.isGroup ? m.sender : m.chat, json, m)
