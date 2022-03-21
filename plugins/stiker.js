@@ -46,5 +46,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
             quoted: m
         })
    }
+}
 handler.command = /^s$/i
 module.exports = handler
