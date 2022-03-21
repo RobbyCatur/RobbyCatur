@@ -33,7 +33,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
       else return m.reply('URL tidak valid!')
       }
-      if (wsf) {
+  } finally {
+  if (wsf) {
             await wsf.build()
             const sticBuffer = await wsf.get()
             if (sticBuffer) await this.sendMessage(m.chat, sticBuffer, MessageType.sticker, {
@@ -41,10 +42,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                 mimetype: 'image/webp'
             })
         }
-  } finally {
-  if (stiker) await this.sendMessage(m.chat, stiker, 'stickerMessage', {
-            quoted: m
-        })
    }
 }
 handler.command = /^s$/i
