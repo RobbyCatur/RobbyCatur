@@ -3,9 +3,9 @@ const { sticker } = require('../lib/sticker')
 const WSF = require('wa-sticker-formatter')
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
+  let stiker = false
+  let wsf = false
   try {
-    let stiker = false
-    let wsf = false
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
     if (/image/.test(mime)) {
