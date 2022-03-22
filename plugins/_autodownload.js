@@ -25,8 +25,8 @@ handler.before = async function (m, { isOwner }) {
         for (let i in servers) {
             let server = servers[i]
             try {
-                yt = await yta(m.text.match(ytIdRegex.*/i)[0].split(/\n| /i)[0]), server)
-                yt2 = await ytv(m.text.match(ytIdRegex.*/i)[0].split(/\n| /i)[0]), server)
+                yt = await yta(m.text.match(ytIdRegex\/.*/i)[0].split(/\n| /i)[0]), server)
+                yt2 = await ytv(m.text.match(ytIdRegex\/.*/i)[0].split(/\n| /i)[0]), server)
                 usedServer = server
                 break
             } catch (e) {
