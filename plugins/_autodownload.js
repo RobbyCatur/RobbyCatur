@@ -45,7 +45,7 @@ handler.before = async function (m, { isOwner }) {
     }
     
     if (/https?:\/\/(fb\.watch|(www\.|web\.|m\.)?facebook\.com)/i.test(m.text)) {
-      let res = await fetch('https://masgimenz.my.id/facebook/?url=' + m.text.match(/https?:\/\/(fb\.watch|(www\.|web\.|m\.)?facebook\.com)\/.*/i)[0].split(/\n| /i)[0]
+      let res = await fetch('https://masgimenz.my.id/facebook/?url=' + m.text.match(/https?:\/\/(fb\.watch|(www\.|web\.|m\.)?facebook\.com)\/.*/i)[0].split(/\n| /i)[0])
       let json = await res.json()
       let url = json.videoUrl
       await this.sendFile(m.chat, url, 'fb.mp4', `${conn.user.name} Facebook downloader`, m)
