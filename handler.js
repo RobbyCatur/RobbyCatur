@@ -74,6 +74,7 @@ module.exports = {
           if (!('antiSticker' in chat)) chat.antiSticker = false
           if (!('getmsg' in chat)) chat.getmsg = false
           if (!('simi' in chat)) chat.simi = false
+          if (!('download' in chat)) chat.download = true
           if (!('viewonce' in chat)) chat.viewonce = false
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
@@ -88,6 +89,7 @@ module.exports = {
           antiSticker: false,
           getmsg: false,
           simi: false,
+          download: true,
           viewonce: false,
         }
 
