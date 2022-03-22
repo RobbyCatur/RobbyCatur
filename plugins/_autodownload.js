@@ -33,8 +33,8 @@ handler.before = async function (m, { isOwner }) {
                // m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
             }
         }
-        // if (yt === false) return m.reply(eror)
-        // if (yt2 === false) return m.reply(eror)
+         if (yt === false) return m.reply(eror)
+         if (yt2 === false) return m.reply(eror)
         let { thumb, title, filesizeF } = yt
         await this.send2ButtonLoc(m.chat, thumb, `
 *Judul:* ${title}
