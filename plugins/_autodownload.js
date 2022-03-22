@@ -12,6 +12,7 @@ handler.before = async function (m, { isOwner }) {
   if (chat.isBanned || user.banned || !chat.download || m.isBaileys) return
   
   if (/https?:\/\/(www\.)?instagram\.com\/(p|reel|tv)/i.test(m.text)) {
+    await m.reply('Proses')
     hx.igdl(m.text.match(/https?:\/\/(www\.)?instagram\.com\/(p|reel|tv)\/.*/i)[0].split(/\n| /i)[0]).then(async (r) => {
       for (let i = 0; i < r.medias.length; i++) {
       conn.sendFile(m.chat, r.medias[i].url, '', `${conn.user.name} Instagram downloader`, m)
@@ -20,6 +21,7 @@ handler.before = async function (m, { isOwner }) {
       }
    
    if (ytIdRegex.test(m.text) || ytIdRegex.test(m.selectedButtonId)) {
+     await m.reply('Proses')
         let yt = false
         let usedServer = servers[0]
         for (let i in servers) {
@@ -45,6 +47,7 @@ handler.before = async function (m, { isOwner }) {
     }
     
     if (/https?:\/\/(fb\.watch|(www\.|web\.|m\.)?facebook\.com)/i.test(m.text)) {
+      await m.reply('Proses')
       let res = await fetch('https://masgimenz.my.id/facebook/?url=' + m.text.match(/https?:\/\/(fb\.watch|(www\.|web\.|m\.)?facebook\.com)\/.*/i)[0].split(/\n| /i)[0])
       let json = await res.json()
       let url = json.videoUrl
