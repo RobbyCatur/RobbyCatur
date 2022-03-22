@@ -32,7 +32,7 @@ handler.before = async function (m, { isOwner }) {
                 usedServer = server
                 break
             } catch (e) {
-                m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
+               // m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
             }
         }
         if (yt === false) return m.reply(eror)
