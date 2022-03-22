@@ -39,6 +39,8 @@ module.exports = {
           if (!('afkReason' in user)) user.afkReason = ''
           if (!('banned' in user)) user.banned = false
           if (!isNumber(user.pc)) user.pc = 0
+          if (!isNumber(user.toxic)) user.toxic = 0
+          if (!isNumber(user.loot)) user.loot = 0
           if (!isNumber(user.level)) user.level = 0
           if (!user.role) user.role = 'Beginner'
           if (!('autolevelup' in user)) user.autolevelup = false
@@ -54,6 +56,8 @@ module.exports = {
           afkReason: '',
           banned: false,
           pc: 0,
+          toxic: 0,
+          loot: 0,
           level: 0,
           role: 'Beginner',
           autolevelup: false,
