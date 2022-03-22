@@ -18,6 +18,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     'autodelvn',
     'getmsg',
     'simi',
+    'download',
     'document',
     'viewonce',
     'autolevelup'
@@ -89,6 +90,12 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
       }
       chat.simi = isEnable
+      break
+    case 'download':
+      if (m.isGroup) {
+      	if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
+      }
+      chat.download = isEnable
       break
     case 'document':
       if (m.isGroup) {
