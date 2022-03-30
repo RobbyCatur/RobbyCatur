@@ -1,6 +1,11 @@
 let fetch = require('node-fetch')
+let moment = require('moment-timezone')
 let winScore = 500
 async function handler(m) {
+    
+    const time = moment.tz('Asia/Jakarta').format('HH')
+    if (time <= 20) throw `Belom waktunya, ntar jam 8 baru bisa maen`
+    if (time >= 22) throw `Waktu maen dah abis, dari tadi kemana aja lu`
     this.game = this.game ? this.game : {}
     let id = 'family100_' + m.chat
     if (id in this.game) {
