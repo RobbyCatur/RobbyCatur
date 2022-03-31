@@ -1,5 +1,5 @@
 const ds = require('dandi-api')
-let handler = async (m, { conn, args, usedPrefix, isOwner }) => {
+let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
 	if (!args[0]) throw `Link tiktoknya mana`
         else m.reply('Proses')
  // if (!isOwner) throw `Maaf, sementara fitur ini dinonaktifkan dulu karena terdapat bug`
