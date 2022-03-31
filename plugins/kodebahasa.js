@@ -53,5 +53,9 @@ let handler = async (m, { conn }) => {
 ❖ tr : Turkish
 ❖ vi : Vietnamese
 ❖ cy : Welsh
-`.trim(), m)`
+`.trim(), m)
 }
+handler.help = ['kodebahasa']
+handler.tags = ['tools']
+handler.command = /^(kodebahasa)$/i
+module.exports = handler
