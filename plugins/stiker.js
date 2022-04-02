@@ -24,6 +24,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
             pack: global.packname,
             author: global.author,
             crop: false,
+            })
     } else if (/webp/.test(mime)) {
       let img = await q.download()
       if (!img) throw `balas sticker dengan caption *${usedPrefix + command}*`
