@@ -20,7 +20,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if ((q.msg || q).seconds > 11) return m.reply('Maksimal 10 detik!')
       let img = await q.download()
       if (!img) throw `balas video/gif dengan caption *${usedPrefix + command}*`
-      stiker = await sticker(img, false, global.packname, global.author)
+      wsf = new WSF.Sticker(img, {
+            pack: global.packname,
+            author: global.author,
+            crop: false,
     } else if (/webp/.test(mime)) {
       let img = await q.download()
       if (!img) throw `balas sticker dengan caption *${usedPrefix + command}*`
@@ -30,7 +33,11 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
             crop: false,
             })
     } else if (args[0]) {
-      if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
+      if (isUrl(args[0])) wsf = new WSF.Sticker(img, {
+            pack: global.packname,
+            author: global.author,
+            crop: false,
+            })
       else return m.reply('URL tidak valid!')
       }
   } finally {
