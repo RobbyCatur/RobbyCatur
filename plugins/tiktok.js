@@ -5,7 +5,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
  // if (!isOwner) throw `Maaf, sementara fitur ini dinonaktifkan dulu karena terdapat bug`
   ds.Tiktok(args[0]).then(r => {
     let me = conn.user.name
-    if (r.no_wm == 'undefined') throw 'Link download tidak ditemukan ಥ_ಥ\n\nSilahkan coba gunakan ${usedPrefix + command}2 untuk mencoba server lain'
+    if (r.no_wm == undefined) throw 'Link download tidak ditemukan ಥ_ಥ\n\nSilahkan coba gunakan ${usedPrefix + command}2 untuk mencoba server lain'
     conn.sendFile(m.chat, r.no_wm, '', `${me} Tiktok Downloader`, m)
      })
 //  if (res.status !== 200) throw `Server error!`
