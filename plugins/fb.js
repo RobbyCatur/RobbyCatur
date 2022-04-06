@@ -9,7 +9,7 @@ let handler = async (m, { conn, args }) => {
 	//if (!json.result) throw `Media tidak ditemukan atau postingan mungkin diprivate`
 	let url = json.videoUrl
 	if (url) await conn.sendFile(m.chat, url, 'fb.mp4', `${me} Facebook Downloader`, m)
-	else m.reply('Link download tidak ditemukan')
+	else throw 'Link download tidak ditemukan'
 	}
 
 handler.help = ['fb', 'fbdl', 'facebook']
